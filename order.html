@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Market-Palace - Order Confirmation</title>
+  <style>
+    .landing-page {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .landing-page h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .landing-page p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .landing-page .order-details {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-page">
+    <h1>Thank you for your order!</h1>
+    <p>Your order has been successfully placed.</p>
+    
+    <div class="order-details">
+      <h2>Order Details</h2>
+      <p>Order ID: {{ order.order_id }}</p>
+      <p>Product: {{ order.product_name }}</p>
+      <p>Price: ${{ order.price }}</p>
+      <p>Quantity: {{ order.quantity }}</p>
+      <p>Total Price: ${{ order.total_price }}</p>
+      <p>Shipping Address: {{ order.shipping_address }}</p>
+    </div>
+    
+    <p>For any further assistance, please contact our customer support.</p>
+  </div>
+</body>
+</html>
